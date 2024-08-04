@@ -1,4 +1,4 @@
-package Task2;
+package Books;
 
 public class Magazine extends Document{
     private int publishNum;
@@ -22,5 +22,10 @@ public class Magazine extends Document{
     }
     public int getPublishMonth() {
         return publishMonth;
+    }
+
+    @Override
+    public String toString() {
+        return "Book: " +  getId() + getPubName() + getAmount() + getPublishNum() + getPublishMonth();
     }
 }

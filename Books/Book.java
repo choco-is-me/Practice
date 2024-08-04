@@ -1,4 +1,4 @@
-package Task2;
+package Books;
 
 public class Book extends Document{
     private String author;
@@ -22,5 +22,10 @@ public class Book extends Document{
     }
     public int getPages() {
         return pages;
+    }
+
+    @Override
+    public String toString() {
+        return "Book: " +  "id:" + getId() + "Publisher name: " + getPubName() + "Amount: " + getAmount() + "Author: " + getAuthor() + "Page num: " + getPages();
     }
 }

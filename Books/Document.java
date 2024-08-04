@@ -1,9 +1,9 @@
-package Task2;
+package Books;
 
 import java.util.HashSet;
 import java.util.Set;
 
-class Document {
+public class Document {
     private int id;
     private String publisherName;
     private int amount;
