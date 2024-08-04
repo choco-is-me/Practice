@@ -10,8 +10,19 @@ public class ManageDocuments {
         this.docList.add(doc);
     }
 
-    public List<Documentt> findDocuments( ) {
-
+    public List<Document> findDocuments() {
+        // Find document with by type (Book or Magazine or Newspaper)
+        List<Document> result = new ArrayList<>();
+        for (Document doc : docList) {
+            if (doc instanceof Book) {
+                result.add(doc);
+            } else if (doc instanceof Magazine) {
+                result.add(doc);
+            } else if (doc instanceof Newspaper) {
+                result.add(doc);
+            }
+        }
+        return result;
     }
 
     public void displayDocList() {

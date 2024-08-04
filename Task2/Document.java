@@ -1,17 +1,28 @@
 package Task2;
 
+import java.util.HashSet;
+import java.util.Set;
+
 class Document {
     private int id;
     private String publisherName;
     private int amount;
 
+    private static Set<Integer> uniqueIds = new HashSet<>();
+
     public Document(int id, String publisherName, int amount) {
+        if (!uniqueIds.add(id)) {
+            throw new RuntimeException("ID already exists");
+        }
         this.id = id;
         this.publisherName = publisherName;
         this.amount = amount;
     }
 
     public void setId(int id) {
+        if (!uniqueIds.add(id)) {
+            throw new RuntimeException("ID already exists");
+        }
         this.id = id;
     }
     public int getId() {
